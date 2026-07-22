@@ -3,4 +3,5 @@ public class Tutor {
     private String telefone;
     private String email;
     private String dataNascimento;
+    private int idade;
 }
