@@ -7,3 +7,11 @@ Domínio: tutores, pets, veterinários e agendamento de consultas.
 ## Status
 
 Em desenvolvimento.
+
+## Tecnologias
+
+- Java 21
+- Spring Boot
+- Maven
+- MySQL
+- Spring Data JPA
