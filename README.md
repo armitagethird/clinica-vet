@@ -39,4 +39,14 @@ docs/            # anotações e decisões de design
 | `data` | `LocalDate` | dia do agendamento |
 | `motivo` | `String` | queixa ou procedimento |
 
+**### `Tutor`
+
+| Campo | Tipo | Descrição |
+|---|---|---|
+| `nome` | `String` | nome do tutor |
+| `telefone` | `String` | contato principal |
+| `email` | `String` | contato secundário |
+| `dataNascimento` | `String` | data de nascimento |
+| `idade` | `int` | idade em anos |**
+
 `dataValida()` rejeita agendamento com data no passado — hoje é permitido.
