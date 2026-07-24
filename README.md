@@ -27,3 +27,16 @@ src/
   main/java/     # código fonte
 docs/            # anotações e decisões de design
 ```
+
+## Modelo de domínio
+
+### `Consulta`
+
+| Campo | Tipo | Descrição |
+|---|---|---|
+| `pet` | `String` | nome do pet atendido |
+| `tutor` | `String` | nome do tutor responsável |
+| `data` | `LocalDate` | dia do agendamento |
+| `motivo` | `String` | queixa ou procedimento |
+
+`dataValida()` rejeita agendamento com data no passado — hoje é permitido.
