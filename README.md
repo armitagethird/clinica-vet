@@ -1,17 +1,29 @@
 # clinica-vet
 
-Sistema de gestão para clínica veterinária — repositório de exercícios guiados do curso de backend Java/Spring.
+Sistema de gestão para clínica veterinária — repositório de exercícios guiados
+do curso de backend Java/Spring.
 
 Domínio: tutores, pets, veterinários e agendamento de consultas.
 
 ## Status
 
-Em desenvolvimento.
+Em desenvolvimento — **Módulo 1 (fundamentos de Git)**. Sem código executável ainda.
 
 ## Tecnologias
 
 - Java 21
-- Spring Boot
+- Spring Boot _(módulos futuros)_
 - Maven
-- MySQL
-- Spring Data JPA
+- MySQL + Spring Data JPA _(módulos futuros)_
+
+## Como rodar
+
+Ainda não aplicável — projeto em fase de fundamentos.
+
+## Estrutura
+
+```
+src/
+  main/java/     # código fonte
+docs/            # anotações e decisões de design
+```
