@@ -13,9 +13,9 @@ public class Aula02 {
         for (int n : notas){
             System.out.println(n + "->" + obterConceito(n));
         }
-        // passo 3 — escreva aqui o for clássico (use i e notas[i])
-
-        // passo 3 — escreva aqui o for-each (use for (int n : notas))
+        System.out.println("Média de valores soltos: " + media(10, 20, 30));
+        System.out.println("Média do array notas:    " + media(notas));
+        System.out.println("Média de nada:           " + media());
     }
 
     private static String obterConceito(int nota) {
@@ -27,6 +27,16 @@ public class Aula02 {
             case 6 -> "D";
             default -> "F";
         };
+    }
+    private static double media (int... notas){
+        if (notas.length == 0) {
+            return 0;
+        }
+        int soma = 0;
+        for (int n : notas){
+            soma += n;
+        }
+        return (double) soma/ notas.length;
     }
 
 }
