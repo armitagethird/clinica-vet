@@ -18,19 +18,16 @@ public class Aula02 {
         System.out.println("Média do array notas:    " + media(notas));
         System.out.println("Média de nada:           " + media());
 
-        Aluno a = new Aluno();
-        a.nome = "Romero";
+        Aluno a = new Aluno("Romero");
 
         renomear(a);
-        System.out.println("Depois de renomear: " + a.nome);
+        System.out.println("Depois de renomear: " + a.getNome());
 
         trocar(a);
-        System.out.println("Depois de trocar: " + a.nome);
+        System.out.println("Depois de trocar: " + a.getNome());
 
-        Aluno b = new Aluno();
-        b.nome = "Ana";
-        Aluno c = new Aluno();
-        c.nome = "Lucas";
+        Aluno b = new Aluno("Ana");
+        Aluno c = new Aluno("Lucas");
 
         processar(a);
         processar(b);
@@ -58,17 +55,16 @@ public class Aula02 {
         return (double) soma/ notas.length;
     }
     private static void renomear(Aluno aluno){
-        aluno.nome = "MUDADO";
+        aluno.setNome("MUDADO");
     }
     private static void trocar(Aluno aluno){
-        aluno = new Aluno();
-        aluno.nome = "OUTRO";
+        aluno = new Aluno("OUTRO");
     }
     private static void processar(Aluno aluno) {
         int contadorLocal = 0;
         contadorLocal++;
         alunosProcessados++;
-        System.out.println(aluno.nome + " | local: " + contadorLocal + " | static: " + alunosProcessados);
+        System.out.println(aluno.getNome() + " | local: " + contadorLocal + " | static: " + alunosProcessados);
     }
 
 }

@@ -1,3 +1,4 @@
+package com.armitagethird.clinica;
 import java.time.LocalDate;
 
 public class Consulta {

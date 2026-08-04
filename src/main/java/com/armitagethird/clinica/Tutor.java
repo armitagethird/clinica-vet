@@ -1,3 +1,5 @@
+package com.armitagethird.clinica;
+
 public class Tutor {
     private String nome;
     private String telefone;
