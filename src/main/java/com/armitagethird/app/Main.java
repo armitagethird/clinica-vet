@@ -20,6 +20,12 @@ public class Main {                             // CLASSE
         ContaBancaria contaDoBeto = new ContaBancaria("Beto");
         System.out.println("Saldo do Beto: " + contaDoBeto.getSaldo());
 
+        ContaPoupanca poupanca = new ContaPoupanca("Carla", 1000.0, 0.05);
+        System.out.println("Poupança da Carla: " + poupanca.getSaldo());
+        poupanca.render();
+        System.out.println("Depois de render 5%: " + poupanca.getSaldo());
+        poupanca.experimentoVisibilidade();
+
         System.out.println("--- agora vai quebrar de proposito ---");
         conta.sacar(9999.0);                    // lança IllegalStateException e MATA o método aqui
         System.out.println("Esta linha nunca vai ser impressa.");
