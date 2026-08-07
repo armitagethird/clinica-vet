@@ -1,6 +1,8 @@
 package com.armitagethird.app;                  // PACOTE app — DIFERENTE do pacote da ContaBancaria
 import com.armitagethird.banco.ContaBancaria;   // IMPORT = apelido, não cópia. Só é preciso por serem pacotes diferentes.
-
+import com.armitagethird.formas.Circulo;
+import com.armitagethird.formas.Retangulo;
+import com.armitagethird.fundamentos.AlunoBolsista;
 public class Main {                             // CLASSE
     public static void main(String[] args){     // MÉTODO — o ÚNICO definido neste arquivo (termina em "{")
                                                 // Daqui pra baixo é tudo CHAMADA (termina em ";")
@@ -26,8 +28,28 @@ public class Main {                             // CLASSE
         System.out.println("Depois de render 5%: " + poupanca.getSaldo());
         poupanca.experimentoVisibilidade();
 
+        ContaBancaria conta2 = new ContaPoupanca("Dora", 100.0, 0.05);
+        conta2.sacar(10.0);
+        System.out.println("Saldo da Dora: " + conta2.getSaldo());
+
+        AlunoBolsista bolsista = new AlunoBolsista("Joao", "bolsista");
+        System.out.println("Nome: " + bolsista.getNome());
+        bolsista.setNome("Maria");
+        System.out.println("Depois do setNome: " + bolsista.getNome());
+
+
+        Circulo circulo = new Circulo(5);
+        System.out.println(circulo.resumo());
+
+        Retangulo retangulo = new Retangulo(5, 6);
+        System.out.println(retangulo.resumo());
+
+
         System.out.println("--- agora vai quebrar de proposito ---");
         conta.sacar(9999.0);                    // lança IllegalStateException e MATA o método aqui
         System.out.println("Esta linha nunca vai ser impressa.");
+
+
     }
+
 }
