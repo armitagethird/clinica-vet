@@ -1,6 +1,6 @@
 package com.armitagethird.formas;
 
-public class Circulo extends FormaGeometrica {
+public class Circulo extends FormaGeometrica implements Redimensionavel {
     private double raio;
 
     public Circulo(double raio) {
@@ -9,11 +9,17 @@ public class Circulo extends FormaGeometrica {
     }
 
     @Override
-    public double area(){
+    public double area() {
         return Math.PI * raio * raio;
     }
 
+    @Override
+    public void redimensionar(double fator) {
+        this.raio = raio * fator;
 
+    }
 
 
 }
+
+

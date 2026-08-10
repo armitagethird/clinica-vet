@@ -3,6 +3,13 @@ import com.armitagethird.banco.ContaBancaria;   // IMPORT = apelido, não cópia
 import com.armitagethird.formas.Circulo;
 import com.armitagethird.formas.Retangulo;
 import com.armitagethird.fundamentos.AlunoBolsista;
+import java.util.List;
+import java.util.ArrayList;
+import com.armitagethird.formas.FormaGeometrica;
+
+
+
+
 public class Main {                             // CLASSE
     public static void main(String[] args){     // MÉTODO — o ÚNICO definido neste arquivo (termina em "{")
                                                 // Daqui pra baixo é tudo CHAMADA (termina em ";")
@@ -41,8 +48,28 @@ public class Main {                             // CLASSE
         Circulo circulo = new Circulo(5);
         System.out.println(circulo.resumo());
 
+
+        Circulo circulo1 = new Circulo(5);
+        circulo1.redimensionar(2);
+        System.out.println(circulo1.resumo());
+        circulo1.resetar();
+
+
+
         Retangulo retangulo = new Retangulo(5, 6);
         System.out.println(retangulo.resumo());
+
+        List<FormaGeometrica> formas = new ArrayList<>();
+        formas.add(circulo1);
+        formas.add(retangulo);
+
+        for (FormaGeometrica n : formas) {
+            System.out.println("Resumo: " + "->" + n.resumo());
+        }
+
+
+
+
 
 
         System.out.println("--- agora vai quebrar de proposito ---");
