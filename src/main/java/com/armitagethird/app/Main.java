@@ -6,7 +6,7 @@ import com.armitagethird.fundamentos.AlunoBolsista;
 import java.util.List;
 import java.util.ArrayList;
 import com.armitagethird.formas.FormaGeometrica;
-
+import com.armitagethird.fundamentos.Pessoa;
 
 
 
@@ -67,7 +67,10 @@ public class Main {                             // CLASSE
             System.out.println("Resumo: " + "->" + n.resumo());
         }
 
-
+        Pessoa p1 = new Pessoa("Ana", 30);
+        Pessoa p2 = new Pessoa("Ana", 30);
+        System.out.println(p1.equals(p2));
+        System.out.println(p1);
 
 
 
