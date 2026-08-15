@@ -9,6 +9,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Collections;
+import java.util.Comparator;
 public class CollectionsDemo {
 
     public static void main(String[] args) {
@@ -20,6 +22,8 @@ public class CollectionsDemo {
         estoque.add(new Produto("Antipulgas", 78.40, "medicamento"));
         estoque.add(new Produto("Coleira refletiva", 24.90, "acessorio"));
         estoque.add(new Produto("Comedouro inox", 39.90, "acessorio"));
+
+        System.out.println("sachê vs ração: " + estoque.get(1).compareTo(estoque.get(0)));
 
         System.out.println("Total de produtos: " + estoque.size());
 
@@ -67,6 +71,32 @@ public class CollectionsDemo {
         }
         for (Map.Entry<String, List<Produto>> entrada : agrupado.entrySet()) {
             System.out.println(entrada.getKey() + " tem " + entrada.getValue().size());
+        }
+
+        System.out.println("--- POR NOME ---");
+        estoque.sort(Comparator.comparing(Produto::getNome));
+        for (Produto p : estoque) {
+            System.out.println(p.getNome() + " - " + p.getPreco());
+        }
+
+        System.out.println("--- MAIS CARO PRIMEIRO ---");
+        estoque.sort(Comparator.comparingDouble(Produto::getPreco).reversed());
+        for (Produto p : estoque) {
+            System.out.println(p.getNome() + " - " + p.getPreco());
+        }
+
+        System.out.println("--- CATEGORIA, DEPOIS PRECO ---");
+        estoque.sort(Comparator.comparing(Produto::getCategoria)
+                .thenComparing(Produto::getPreco));
+        for (Produto p : estoque) {
+            System.out.println(p.getCategoria() + " | " + p.getNome() + " - " + p.getPreco());
+        }
+
+
+        System.out.println("--- ORDENADO POR PREÇO ---");
+        Collections.sort(estoque);
+        for (Produto p : estoque){
+            System.out.println(p.getNome() + " - " + p.getPreco());
         }
     }
 }

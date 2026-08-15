@@ -2,7 +2,7 @@ package com.armitagethird.fundamentos;
 
 import java.util.Objects;
 
-public class Produto {
+public class Produto implements Comparable<Produto> {
 
     private String nome;
     private double preco;
@@ -45,6 +45,10 @@ public class Produto {
     @Override
     public int hashCode() {
         return Objects.hash(nome, preco, categoria);
+    }
+    @Override
+    public int compareTo(Produto outro){
+        return Double.compare(this.preco, outro.preco);
     }
 
     public void aplicarDesconto(double percentual) {
