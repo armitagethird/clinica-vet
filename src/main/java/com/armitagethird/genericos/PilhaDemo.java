@@ -1,5 +1,7 @@
 package com.armitagethird.genericos;
 import java.util.List;
+import com.armitagethird.arquivos.LeitorDeArquivo;
+import java.io.IOException;
 
 public class PilhaDemo {
 
@@ -39,6 +41,14 @@ public class PilhaDemo {
         System.out.println("O programa continua vivo");
 
         System.out.println(testeFinally());
+
+        System.out.println("--- AGENDA DE HOJE ---");
+        try{
+            LeitorDeArquivo.imprimirAgenda("consultas.txt");
+
+        } catch (IOException e){
+            System.out.println("Fala ao ler a agenda: " + e.getMessage());
+        }
 
 
     }
